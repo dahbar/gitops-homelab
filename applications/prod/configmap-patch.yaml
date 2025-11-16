@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Nginx - PROD</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            }
+            .container {
+                text-align: center;
+                padding: 50px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            h1 { font-size: 3em; margin: 0; color: #43e97b; }
+            p { font-size: 1.5em; color: #666; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Prod Nginx</h1>
+            <p>Environment: PRODUCTION</p>
+            <p>✅ Live System</p>
+        </div>
+    </body>
+    </html>
